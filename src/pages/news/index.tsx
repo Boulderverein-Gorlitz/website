@@ -1,6 +1,6 @@
 import React from "react"
 import { Layout } from "../../components/layout"
-import { graphql, PageProps } from "gatsby"
+import { graphql, Link, PageProps } from "gatsby"
 import { MultiMarkdownPage, multiMarkdownPageFragment } from "../../queries"
 
 export const query = graphql`
@@ -16,7 +16,7 @@ function NewsOverview({ data }: PageProps<MultiMarkdownPage>) {
     <Layout>
       {pages.map((page, index) => (
         <div key={page.fields.slug}>
-          <a href={page.fields.slug}>{page.frontmatter.title}</a>
+          <Link to={page.fields.slug}>{page.frontmatter.title}</Link>
         </div>
       ))}
     </Layout>
