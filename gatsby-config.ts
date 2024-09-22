@@ -4,8 +4,9 @@ import path from "node:path"
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Boulder-Verein Görlitz`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://boulderverein-gorlitz.github.io/website/`,
   },
+  pathPrefix: "website",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
