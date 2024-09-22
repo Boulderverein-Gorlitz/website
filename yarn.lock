@@ -4512,9 +4512,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"boulder-verein-g-rlitz@workspace:.":
+"boulder-verein-goerlitz@workspace:.":
   version: 0.0.0-use.local
-  resolution: "boulder-verein-g-rlitz@workspace:."
+  resolution: "boulder-verein-goerlitz@workspace:."
   dependencies:
     "@types/node": "npm:^20.11.19"
     "@types/react": "npm:^18.2.55"
