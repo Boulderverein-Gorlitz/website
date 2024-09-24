@@ -1,6 +1,5 @@
 ---
 title: "Satzung"
-slug: "satzung"
 ---
 
 # Satzung

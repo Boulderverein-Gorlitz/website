@@ -4531,6 +4531,7 @@ __metadata:
     gatsby-transformer-sharp: "npm:^5.13.1"
     husky: "npm:>=6"
     lint-staged: "npm:>=10"
+    modern-normalize: "npm:^3.0.1"
     prettier: "npm:^3.3.2"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -10929,6 +10930,13 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 10c0/46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
+"modern-normalize@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "modern-normalize@npm:3.0.1"
+  checksum: 10c0/2c19be1618178b85006e354337d7dda6758640d138be5f3e247c9ebb5dd5d7845edb0b8753cec659e789bb30e1fafe73e91eaa056a332d89055cbb107d9fecec
   languageName: node
   linkType: hard
 

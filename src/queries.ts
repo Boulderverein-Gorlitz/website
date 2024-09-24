@@ -13,6 +13,7 @@ export type MarkdownPage = {
   frontmatter: FrontMatter
   fields: Fields
   html: string
+  excerpt: string
 }
 
 export const markdownPageFragment = graphql`
@@ -25,6 +26,7 @@ export const markdownPageFragment = graphql`
       date
     }
     html
+    excerpt(pruneLength: 800)
   }
 `
 

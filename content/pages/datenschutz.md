@@ -1,6 +1,5 @@
 ---
 title: "Datenschutz"
-slug: "datenschutz"
 ---
 
 # Datenschutzerklärung

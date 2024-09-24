@@ -11,8 +11,6 @@ function NewsPage({ data }: PageProps<SingleMarkdownPage>) {
       html,
     },
   } = data
-
-  console.log("time", date)
   return (
     <Layout>
       <article>

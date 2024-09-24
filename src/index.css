@@ -1,0 +1,90 @@
+@import "modern-normalize/modern-normalize.css";
+
+html {
+  font-size: 18px;
+
+  --color-dark-red: #780000;
+  --color-light-red: #c1121f;
+  --color-neutral: #fdf0d5;
+  --color-dark-blue: #003049;
+  --color-light-blue: #669bbc;
+
+  color: var(--color-dark-blue);
+}
+
+a {
+  color: var(--color-light-blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-light-blue);
+}
+
+a:hover {
+  color: var(--color-dark-blue);
+}
+
+.page-root {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  & > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    nav > ul {
+      display: flex;
+
+      & > li > a {
+        padding: 10px;
+      }
+    }
+  }
+
+  & > main {
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+
+  & > footer {
+    background: var(--color-dark-blue);
+    color: var(--color-neutral);
+
+    & > ul {
+      display: flex;
+
+      & > li {
+        list-style: none;
+        > a {
+          padding: 10px;
+          color: var(--color-neutral);
+        }
+      }
+    }
+  }
+}
+
+.page-nav {
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.news-overview {
+  & > ul > li {
+    list-style: none;
+
+    & > article {
+      margin-bottom: 4rem;
+    }
+  }
+}
