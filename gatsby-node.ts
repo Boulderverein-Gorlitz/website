@@ -1,7 +1,5 @@
 import type { CreateNodeArgs, GatsbyNode, Node } from "gatsby"
 import { createFilePath } from "gatsby-source-filesystem"
-import { MultiMarkdownPage } from "./src/queries"
-import path from "node:path"
 
 function createSlug({
   node,
@@ -62,46 +60,4 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = (params) => {
       }
     }
   }
-}
-
-export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  const result = await graphql<MultiMarkdownPage>(`
-    query {
-      allMarkdownRemark(filter: { fields: { sourceInstanceName: { eq: "news" } } }) {
-        edges {
-          node {
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
-            html
-          }
-        }
-      }
-    }
-  `)
-
-  if (result.errors) {
-    throw new Error(result.errors)
-  }
-
-  if (!result.data) {
-    throw new Error("result.data is undefined")
-  }
-
-  const nodes = result.data.allMarkdownRemark.edges.map((edge) => edge.node)
-
-  nodes.forEach((node) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve("./src/templates/news-template.tsx"),
-      context: {
-        slug: node.fields.slug,
-      },
-    })
-  })
 }
