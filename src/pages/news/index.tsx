@@ -22,6 +22,9 @@ function NewsOverview({ data }: PageProps<MultiMarkdownPage>) {
                 <Link to={page.fields.slug}>
                   <h2>{page.frontmatter.title}</h2>
                 </Link>
+                <strong>
+                  <time dateTime={page.fields.date}>{page.fields.date}</time>
+                </strong>
               </header>
               <div dangerouslySetInnerHTML={{ __html: page.excerpt }} />
             </article>

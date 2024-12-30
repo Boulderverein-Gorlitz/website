@@ -1,90 +1,169 @@
 @import "modern-normalize/modern-normalize.css";
 
 html {
+  color-scheme: light dark;
   font-size: 18px;
 
-  --color-dark-red: #780000;
-  --color-light-red: #c1121f;
-  --color-neutral: #fdf0d5;
-  --color-dark-blue: #003049;
-  --color-light-blue: #669bbc;
+  /**
+            Theming Step 1: define colors with common name independent of any kind of usage
+            Those colors should typically not being used explicitly in the app.
+          */
+  --color-neutral-light: white;
+  --color-red: #f06543;
+  --color-green-neutral: #90be6d;
+  --color-green-light: #c9e3ac;
+  --color-green-dark: #4d7033;
+  --color-blue-neutral: #00708f;
+  --color-blue-light: #0096c0;
+  --color-blue-dark: #004e64;
+  --color-blue-extra-dark: #002934;
 
-  color: var(--color-dark-blue);
+  /**
+            Theming Step 2: define theme colors for semantical usage. Names shouldn't include any color terms or "dark"/"light".
+            Reference these variables within the app.
+           */
+  --color-font-default: var(--color-blue-extra-dark);
+  --color-font-link-default: var(--color-blue-neutral);
+  --color-font-link-hover: var(--color-blue-light);
+  --color-background: var(--color-neutral-light);
+
+  --color-inverse-background: var(--color-blue-dark);
+  --color-inverse-font-default: var(--color-neutral-light);
+  --color-inverse-font-link-default: var(--color-green-light);
+  --color-inverse-font-link-hover: var(--color-green-light);
+
+  @media (prefers-color-scheme: dark) {
+    /**
+            Theming Step 3: define all semantical colors also for dark theme
+            hint: this can be done way shorter as soon as https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark is widely supported.
+             */
+    --color-font-default: var(--color-neutral-light);
+    --color-font-link-default: var(--color-green-light);
+    --color-font-link-hover: var(--color-green-neutral);
+    --color-background: var(--color-blue-dark);
+
+    --color-inverse-background: var(--color-blue-extra-dark);
+    --color-inverse-font-default: var(--color-neutral-light);
+    --color-inverse-font-link-default: var(--color-green-light);
+    --color-inverse-font-link-hover: var(--color-green-light);
+  }
+
+  /**
+            Theming Step 4: Use the semantic theme variables to style actual elements
+           */
+  background-color: var(--color-background);
+  color: var(--color-font-default);
+
+  --page-max-width: 1000px;
+  --page-title-width: 300px;
+  --page-margin-left: 20px;
 }
 
 a {
-  color: var(--color-light-blue);
+  color: var(--color-font-link-default);
   text-decoration: none;
 }
 
-a:visited {
-  color: var(--color-light-blue);
-}
-
 a:hover {
-  color: var(--color-dark-blue);
+  color: var(--color-font-link-hover);
 }
 
 .page-root {
-  height: 100vh;
-  width: 100vw;
-
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   & > header {
+    max-width: var(--page-max-width);
     display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    nav > ul {
-      display: flex;
+    flex-direction: row;
 
-      & > li > a {
-        padding: 10px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    align-items: start;
+
+    #page-title {
+      h1 {
+        color: var(--color-font-link-default);
+      }
+
+      padding-left: var(--page-margin-left);
+      width: var(--page-title-width);
+    }
+
+    nav {
+      align-self: center;
+
+      @media (max-width: 900px) {
+        align-self: start;
+        padding-left: var(--page-margin-left);
+      }
+
+      > ul {
+        padding: 0;
+        display: flex;
+        gap: 20px;
+
+        & > li {
+          list-style: none;
+
+          > a.active {
+            color: var(--color-font-link-hover);
+          }
+        }
       }
     }
   }
 
   & > main {
     flex-grow: 1;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
+    align-self: center;
+    margin-left: var(--page-margin-left);
+    max-width: var(--page-max-width);
+
+    @media (min-width: 1580px) {
+      margin-left: var(--page-title-width);
+      align-self: start;
+    }
   }
 
   & > footer {
-    background: var(--color-dark-blue);
-    color: var(--color-neutral);
+    background: var(--color-inverse-background);
+    color: var(--color-inverse-font-default);
 
     & > ul {
       display: flex;
 
       & > li {
         list-style: none;
+
         > a {
           padding: 10px;
-          color: var(--color-neutral);
+          color: var(--color-inverse-font-link-default);
+
+          &:hover {
+            color: var(--color-inverse-font-link-hover);
+          }
         }
       }
     }
   }
 }
 
-.page-nav {
-  ul {
-    li {
-      list-style: none;
-    }
-  }
-}
-
 .news-overview {
-  & > ul > li {
-    list-style: none;
+  & > ul {
+    padding: 0;
 
-    & > article {
-      margin-bottom: 4rem;
+    > li {
+      list-style: none;
+
+      & > article {
+        margin-bottom: 4rem;
+      }
     }
   }
 }
