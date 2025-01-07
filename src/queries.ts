@@ -44,7 +44,10 @@ export const singleMarkdownPageFragment = graphql`
 
 export const multiMarkdownPageFragment = graphql`
   fragment MultiMarkdownPage on Query {
-    allMarkdownRemark(filter: { fields: { sourceInstanceName: { eq: $sourceInstanceName } } }) {
+    allMarkdownRemark(
+      filter: { fields: { sourceInstanceName: { eq: $sourceInstanceName } } }
+      sort: { fields: { date: DESC } }
+    ) {
       edges {
         node {
           ...MarkdownPageFragment
