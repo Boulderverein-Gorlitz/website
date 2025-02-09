@@ -48,12 +48,12 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 800,
-              excerpt_separator: `<!-- end -->`,
             },
           },
         ],
