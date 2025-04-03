@@ -9,11 +9,15 @@ Kontakt-Möglichkeiten.
 
 ## Werde Mitglied
 
-Wenn du unsere Vereinsziele gut findest, kannst du gerne Vereinsmitglied werden.
+Wir freuen uns, wenn du Mitglied im Verein werden möchtest.
+Fülle dazu den Mitgliedsantrag sowie die Datenschutz-Einwilligung aus und sende
+sie unterschrieben entweder per E-Mail an `bouldern.goerlitz@posteo.de` oder per Post
+an:
+
+Anne Kauffmann  
+Am Wasserwerk 5a  
+02827 Görlitz  
 
 - [Formular: Mitgliedsantrag](/files/mitgliedsantrag.pdf)
 - [Formular: Datenschutz Einwilligung + Widerrufserklärung](/files/einwilligungserklaerung.pdf)
 
-## Spenden
-
-_todo_
