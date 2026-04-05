@@ -5,7 +5,6 @@ title: Impressum
 # Angaben gemäß § 5 TMG <br/> Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 
 Boulderverein Görlitz e.V.  
-Anne Kauffmann  
 Am Wasserwerk 5a  
 02827 Görlitz
 

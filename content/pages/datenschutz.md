@@ -8,7 +8,6 @@ title: "Datenschutz"
 <h3 id="Name_und_Anschrift_des_Verantwortlichen">Name und Anschrift des Verantwortlichen</h3>
 <p>Verantwortlich im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist der:
 </p><p>Boulderverein Görlitz e.V. <br />
-Anne Kauffmann<br/>
 Am Wasserwerk 5a<br/>
 02827 Görlitz<br/>
 E-Mail: bouldern.goerlitz@posteo.de  <br/>
