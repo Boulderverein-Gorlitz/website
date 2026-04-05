@@ -8,17 +8,12 @@ function MainNavigation() {
       <ul>
         <li>
           <Link activeClassName="active" to="/">
-            Home
+            Verein
           </Link>
         </li>
         <li>
           <Link activeClassName="active" to="/news">
             Neuigkeiten
-          </Link>
-        </li>
-        <li>
-          <Link activeClassName="active" to="/verein">
-            Verein
           </Link>
         </li>
         <li>

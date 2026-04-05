@@ -26,7 +26,7 @@ function NewsOverview({ data }: PageProps<MultiMarkdownPage>) {
                   <time dateTime={page.fields.date}>{page.fields.date}</time>
                 </strong>
               </header>
-              <div dangerouslySetInnerHTML={{ __html: page.excerpt }} />
+              <div dangerouslySetInnerHTML={{ __html: page.html }} />
             </article>
           </li>
         ))}

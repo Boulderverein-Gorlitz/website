@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Verein"
 slug: "/"
 ---
 
@@ -13,3 +13,5 @@ der Suche nach einem Raum, in dem unsere Vorstellungen Platz finden können.
 
 Momentan treffen wir uns alle 2 Wochen, um uns auf den nuesten Stand zu bringen. Wenn du Lust hast, uns beim nächsten
 Plenum selbst kennenzulernen, nimm gern mit uns [Kontakt](/mitmachen) auf.
+
+[Unsere Satzung](/satzung)
