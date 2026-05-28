@@ -17,6 +17,11 @@ function MainNavigation() {
           </Link>
         </li>
         <li>
+          <Link activeClassName="active" to="/halle">
+            Halle
+          </Link>
+        </li>
+        <li>
           <Link activeClassName="active" to="/mitmachen">
             Mitmachen
           </Link>
