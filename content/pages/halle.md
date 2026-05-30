@@ -9,7 +9,8 @@ Boulderbereich aufbauen.
 
 Die Halle befindet sich im ["Kühlhaus Görlitz"](https://kuehlhaus-goerlitz.de/).
 
-Am Bahnhof Weinhübel 2 02827 Görlitz
+Am Bahnhof Weinhübel 2  
+02827 Görlitz
 
 ## Öffnungszeiten
 
@@ -17,4 +18,9 @@ Gegenwärtig sind die Öffnungszeiten noch unregelmäßig. Sie werden hier verö
 
 ## Nutzungsbedingungen
 
-Wird in Kürze ergänzt.
+Es gelten die folgenden Nutzungsbedingungen. Bring bitte das ausgefüllte Dokument (Deutsch oder Englisch) vor der ersten
+Nutzung der Halle mit. Dabei gelten die folgenden Datenschutzbedingungen.
+
+- [Download Nutzungsbedingungen (Deutsch)](/files/260518_Nutzungsbedingungen.pdf)
+- [Download Nutzungsbedingungen (Englisch)](/files/260518_Nutzungsbedingungen_englisch.pdf)
+- [Download Datenschutzerklärung](/files/260511_Datenschutzerklärung.pdf)
