@@ -28,12 +28,7 @@ function MainNavigation() {
         </li>
         <li>
           <Link activeClassName="active" to="/mitmachen">
-            Mitmachen
-          </Link>
-        </li>
-        <li>
-          <Link activeClassName="active" to="/bouldern">
-            Was ist Bouldern?
+            Mitmachen & Unterstützen
           </Link>
         </li>
         <li>
