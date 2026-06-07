@@ -17,6 +17,11 @@ function MainNavigation() {
           </Link>
         </li>
         <li>
+          <Link activeClassName="active" to="/opening-hours">
+            Öffnungszeiten
+          </Link>
+        </li>
+        <li>
           <Link activeClassName="active" to="/halle">
             Halle
           </Link>

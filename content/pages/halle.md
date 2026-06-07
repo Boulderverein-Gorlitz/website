@@ -12,10 +12,6 @@ Die Halle befindet sich im ["Kühlhaus Görlitz"](https://kuehlhaus-goerlitz.de/
 Am Bahnhof Weinhübel 2  
 02827 Görlitz
 
-## Öffnungszeiten
-
-Gegenwärtig sind die Öffnungszeiten noch unregelmäßig. Sie werden hier veröffentlicht.
-
 ## Nutzungsbedingungen
 
 Es gelten die folgenden Nutzungsbedingungen. Bring bitte das ausgefüllte Dokument (Deutsch oder Englisch) vor der ersten
