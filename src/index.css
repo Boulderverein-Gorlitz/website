@@ -82,6 +82,10 @@ a:hover {
     @media (max-width: 900px) {
       flex-direction: column;
       align-items: start;
+
+      #page-title {
+        width: auto;
+      }
     }
 
     align-items: start;
@@ -105,8 +109,15 @@ a:hover {
 
       > ul {
         padding: 0;
+        margin: 0;
         display: flex;
-        gap: 20px;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        @media (max-width: 900px) {
+          flex-direction: column;
+          gap: 10px;
+        }
 
         & > li {
           list-style: none;
