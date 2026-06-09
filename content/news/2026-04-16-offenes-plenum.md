@@ -8,7 +8,5 @@ Bei Fragen: bouldern.goerlitz@posteo.de
 
 Wir freuen uns auf Dich!
 
-<div style="display: flex">
-<img src="/images/2026-04-16-Flyer-Plenum-seite-01.jpg" style="max-width: 500px" alt="Flyer Seite 1">
-<img src="/images/2026-04-16-Flyer-Plenum-seite-02.jpg" style="max-width: 500px" alt="Flyer Seite 2">
-</div>
+![Flyer Seite 1](../images/2026-04-16-Flyer-Plenum-seite-01.jpg)
+![Flyer Seite 2](../images/2026-04-16-Flyer-Plenum-seite-02.jpg)

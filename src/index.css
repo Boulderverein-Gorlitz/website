@@ -190,3 +190,10 @@ a:hover {
     font-family: monospace;
   }
 }
+
+article img,
+article figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

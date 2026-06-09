@@ -29,6 +29,6 @@ aktiv mithelfen möchten.
 Wie ihr uns unterstützen könnt, erfahrt ihr unter [Mitmachen und Unterstützen](/mitmachen). 
 
 
-![Kids beim Fahren](/images/2026/2026-06-06-eröffnung_01.jpg)
-![Kids beim Fahren](/images/2026/2026-06-06-eröffnung_02.jpg)
-![Aufbau der mobilen Boulderwand](/images/2026/2026-06-06-eröffnung_03.jpg)
+![Kids beim Fahren](../images/2026/2026-06-06-eröffnung_01.jpg)
+![Kids beim Fahren](../images/2026/2026-06-06-eröffnung_02.jpg)
+![Aufbau der mobilen Boulderwand](../images/2026/2026-06-06-eröffnung_03.jpg)
