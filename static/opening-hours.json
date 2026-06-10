@@ -1,36 +1,46 @@
-[
-  {
-    "date": "2026-06-26",
-    "startTime": "17:30",
-    "endTime": "20:30",
-    "helpers": [
-      "Gustav"
-    ]
-  },
-  {
-    "date": "2026-07-12",
-    "startTime": "09:00",
-    "endTime": "12:00",
-    "helpers": [
-      "Gustav"
-    ]
-  },
-  {
-    "date": "2026-07-15",
-    "startTime": "16:00",
-    "endTime": "19:00",
-    "helpers": [
-      "Gustav",
-      "Thomas"
-    ]
-  },
-  {
-    "date": "2026-07-23",
-    "startTime": "16:00",
-    "endTime": "19:00",
-    "helpers": [
-      "Gustav",
-      "Thomas"
-    ]
-  }
-]
+{
+  "closingDays": [
+    {
+      "comment": "Cyrkus",
+      "from": "2026-07-04",
+      "to": "2026-07-18"
+    },
+    {
+      "comment": "Good2U",
+      "from": "2026-08-07",
+      "to": "2026-08-21"
+    },
+    {
+      "comment": "Überland",
+      "from": "2026-09-04",
+      "to": "2026-09-06"
+    }
+  ],
+  "openingHours": [
+    {
+      "date": "2026-06-19",
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "helpers": [
+        "Jens"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "startTime": "17:30",
+      "endTime": "20:30",
+      "helpers": [
+        "Gustav"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "helpers": [
+        "Gustav",
+        "Thomas"
+      ]
+    }
+  ]
+}

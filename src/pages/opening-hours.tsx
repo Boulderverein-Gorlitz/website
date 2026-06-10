@@ -1,7 +1,26 @@
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Layout } from "../components/layout"
 
 import { DateTime } from "luxon"
+
+type OpeningHoursJson = {
+  closingDays: Array<ClosingDaysEntry>
+  openingHours: Array<OpeningHoursEntry>
+}
+
+function isOpeningHoursJson(value: any): value is OpeningHoursJson {
+  if (value) {
+    return Array.isArray(value?.closingDays) && Array.isArray(value?.openingHours)
+  } else {
+    return false
+  }
+}
+
+type ClosingDaysEntry = {
+  comment?: string
+  from: string
+  to?: string
+}
 
 type OpeningHoursEntry = {
   date: string
@@ -73,6 +92,7 @@ const FETCH_URL = "/opening-hours.json"
 
 function OpeningHoursPage() {
   const [openingHours, setOpeningHours] = useState<Array<OpeningHoursDisplayEntry>>([])
+  const [closingDays, setClosingDays] = useState<Array<ClosingDaysEntry>>([])
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<any>(undefined)
@@ -86,10 +106,9 @@ function OpeningHoursPage() {
         return response.json()
       })
       .then((result) => {
-        if (Array.isArray(result)) {
-          const entries = transformOpeningHoursEntries(result, minimumDateToShow)
-
-          setOpeningHours(entries)
+        if (isOpeningHoursJson(result)) {
+          setOpeningHours(transformOpeningHoursEntries(result.openingHours, minimumDateToShow))
+          setClosingDays(result.closingDays)
           setError(undefined)
         } else {
           setError("Load successful but data is not correct. Got:" + JSON.stringify(result))
@@ -122,6 +141,25 @@ function OpeningHoursPage() {
         </>
       ) : (
         <>
+          {closingDays.length > 0 && (
+            <>
+              <p>In folgenden Zeiträumen haben wir generell geschlossen:</p>
+              <ul>
+                {closingDays.map((closingDayEntry) => {
+                  if (closingDayEntry.to) {
+                    return (
+                      <li>
+                        {DateTime.fromISO(closingDayEntry.from).toLocaleString(DateTime.DATE_FULL)} - {DateTime.fromISO(closingDayEntry.to).toLocaleString(DateTime.DATE_FULL)}
+                      </li>
+                    )
+                  } else {
+                    return <li>{DateTime.fromISO(closingDayEntry.from).toLocaleString(DateTime.DATE_FULL)}</li>
+                  }
+                })}
+              </ul>
+            </>
+          )}
+          <br />
           {openingHours.length === 0 && <p>Aktuell keine Öffnungszeiten :-(</p>}
           {openingHours.length > 0 && (
             <table>
