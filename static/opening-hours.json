@@ -18,6 +18,14 @@
   ],
   "openingHours": [
     {
+      "date": "2026-06-13",
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "helpers": [
+        "Wojciech"
+      ]
+    },
+    {
       "date": "2026-06-19",
       "startTime": "17:00",
       "endTime": "20:00",
