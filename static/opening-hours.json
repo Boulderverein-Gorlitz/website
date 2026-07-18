@@ -82,6 +82,14 @@
       "helpers": [
         "Gustav"
       ]
+    },
+    {
+      "date": "2026-08-30",
+      "startTime": "15:00",
+      "endTime": "18:30",
+      "helpers": [
+        "Jens"
+      ]
     }
   ]
 }
