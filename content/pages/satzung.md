@@ -92,7 +92,7 @@ title: "Satzung"
 ## § 5 Mitgliedsbeiträge
 
 Von den Mitgliedern werden Beiträge erhoben. Die Höhe der Aufnahme- und Jahresbeiträge und deren Fälligkeiten werden in
-der Beitragsordnung geregelt. Die Beitragsordnung ist nicht Bestandteil der Satzung und wird von der
+der [Beitragsordnung](/files/251103_Boulderverein_Gebührenordnung.pdf) geregelt. Die Beitragsordnung ist nicht Bestandteil der Satzung und wird von der
 Mitgliederversammlung bestimmt. Ehrenmitglieder sind von der Beitragspflicht befreit.
 
 ## § 6 Organe des Vereins

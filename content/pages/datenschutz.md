@@ -34,13 +34,13 @@ Website: www.bouldern-goerlitz.de <br/>
 </p><p>Möchtest Du uns Deine E-Mail Adresse nicht mitteilen, erhältst Du per Post Einladungen zu unseren Mitgliederversammlungen. An unserem Vereinsleben kannst Du selbstverständlich teilhaben, musst Dich dann aber über unsere öffentlichen Quellen informieren oder direkt mit anderen Mitgliedern kommunizieren.
 </p>
 <h4>Webservices</h4>
-<p>Wenn Du an unseren internen Diensten, wie z.B. Wiki, Forum, Cloud teilnimmst, wird Deine E-Mail Adresse hinterlegt, um Dich bei administrativen Vorgängen, wie etwa das zurücksetzen Deines Passwortes, zu informieren. Auch kannst Du Dich bei den Diensten für verschiedene Ereignisse registrieren. Dann erhältst Du eine E-Mail, sobald dieses Ereignis eingetreten ist.
+<p>Wenn Du an unseren internen Diensten, wie z.B. Cloud teilnimmst, wird Deine E-Mail Adresse hinterlegt, um Dich bei administrativen Vorgängen, wie etwa das zurücksetzen Deines Passwortes, zu informieren. Auch kannst Du Dich bei den Diensten für verschiedene Ereignisse registrieren. Dann erhältst Du eine E-Mail, sobald dieses Ereignis eingetreten ist.
 </p>
 <h4>E-Mail Verteiler</h4>
 <p>Außerdem können wir Dich zu unserem E-Mail Verteiler hinzufügen. Schreibt ein Vereinsmitglied an diesen Verteiler eine E-Mail, so wird diese Nachricht an alle Teilnehmenden versendet. Diese Möglichkeit kannst Du jederzeit wieder abbestellen.
 </p>
 <h3>Bankverbindung</h3>
-<p>In unserer <a href="/beitragsordnung#Zahlungsweise" title="Beitragsordnung">Beitragsordnung</a> wird der Bankeinzug als Zahlungsweise bevorzugt. Möchtest Du den Mitgliedsbeitrag per Bankeinzug von Deinem Konto abgebucht bekommen, so müssen wir neben Deinem Namen auch die Daten zu Deiner Bankverbindung verarbeiten. Du kannst den Mitgliedsbeitrag jedoch auch ohne Angabe Deiner Bankverbindung an uns überweisen oder bar bezahlen. Bei allen Zahlungen werden wir jedoch Deinen Namen speichern, um den Zahlungseingang korrekt zu verbuchen.
+<p>In unserer <a href="/files/251103_Boulderverein_Gebührenordnung.pdf" title="Beitragsordnung">Beitragsordnung</a> wird der Bankeinzug als Zahlungsweise bevorzugt. Möchtest Du den Mitgliedsbeitrag per Bankeinzug von Deinem Konto abgebucht bekommen, so müssen wir neben Deinem Namen auch die Daten zu Deiner Bankverbindung verarbeiten. Du kannst den Mitgliedsbeitrag jedoch auch ohne Angabe Deiner Bankverbindung an uns überweisen oder bar bezahlen. Bei allen Zahlungen werden wir jedoch Deinen Namen speichern, um den Zahlungseingang korrekt zu verbuchen.
 </p>
 <h3>Fotos</h3>
 <p>Zur Präsentation auf unserer Homepage aber auch zur Öffentlichkeitsarbeit und zur Dokumentation unserer Arbeit möchten wir gelegentlich Fotos von unseren Aktivitäten erstellen. Gern auch mit Deiner Person auf dem Bild.

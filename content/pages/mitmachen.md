@@ -18,6 +18,7 @@ Boulderverein Görlitz e.V. Am Wasserwerk 5a
 
 - [Formular: Mitgliedsantrag](/files/mitgliedsantrag.pdf)
 - [Formular: Datenschutz Einwilligung + Widerrufserklärung](/files/einwilligungserklaerung.pdf)
+- [Beitragsordnung](/files/251103_Boulderverein_Gebührenordnung.pdf)
 
 ## Finanziell unterstützen
 

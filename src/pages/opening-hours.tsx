@@ -134,6 +134,7 @@ function OpeningHoursPage() {
         kurzfristig ändern.
       </p>
       <p>Schau regelmäßig nach, ob es Änderungen gibt.</p>
+      <p>Es gelten die Nutzungsbedingungen und Eintrittspreis, siehe <a href="/halle">Halle</a>.</p>
 
       {loading ? (
         <>
