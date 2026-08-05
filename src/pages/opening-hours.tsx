@@ -161,6 +161,7 @@ function OpeningHoursPage() {
             </>
           )}
           <br />
+          <p>Öffnungszeiten:</p>
           {openingHours.length === 0 && <p>Aktuell keine Öffnungszeiten :-(</p>}
           {openingHours.length > 0 && (
             <table>

@@ -90,6 +90,30 @@
       "helpers": [
         "Jens"
       ]
+    },
+    {
+      "date": "2026-09-10",
+      "startTime": "17:30",
+      "endTime": "21:00",
+      "helpers": [
+        "Gustav"
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "startTime": "17:30",
+      "endTime": "21:00",
+      "helpers": [
+        "Gustav"
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "startTime": "17:30",
+      "endTime": "21:00",
+      "helpers": [
+        "Gustav"
+      ]
     }
   ]
 }
