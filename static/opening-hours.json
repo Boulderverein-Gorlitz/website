@@ -1,16 +1,6 @@
 {
   "closingDays": [
     {
-      "comment": "Cyrkus",
-      "from": "2026-07-04",
-      "to": "2026-07-18"
-    },
-    {
-      "comment": "Good2U",
-      "from": "2026-08-07",
-      "to": "2026-08-21"
-    },
-    {
       "comment": "Überland",
       "from": "2026-09-04",
       "to": "2026-09-06"
@@ -96,7 +86,8 @@
       "startTime": "17:30",
       "endTime": "21:00",
       "helpers": [
-        "Gustav"
+        "Gustav",
+        "Manuel"
       ]
     },
     {
@@ -112,7 +103,8 @@
       "startTime": "17:30",
       "endTime": "21:00",
       "helpers": [
-        "Gustav"
+        "Gustav",
+        "Manuel"
       ]
     }
   ]
