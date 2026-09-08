@@ -96,11 +96,21 @@
       ]
     },
     {
+      "date": "2026-09-11",
+      "startTime": "17:00",
+      "endTime": "21:00",
+      "helpers": [
+        "Konstanze",
+        "Alrik"
+      ]
+    },
+    {
       "date": "2026-09-24",
       "startTime": "17:30",
       "endTime": "21:00",
       "helpers": [
-        "Gustav"
+        "Gustav",
+        "Thomas"
       ]
     },
     {
@@ -108,8 +118,7 @@
       "startTime": "17:30",
       "endTime": "21:00",
       "helpers": [
-        "Gustav",
-        "Manuel"
+        "Gustav"
       ]
     }
   ]
