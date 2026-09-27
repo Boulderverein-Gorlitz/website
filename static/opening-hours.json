@@ -115,10 +115,18 @@
     },
     {
       "date": "2026-09-30",
-      "startTime": "17:30",
+      "startTime": "16:30",
       "endTime": "21:00",
       "helpers": [
         "Gustav"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "startTime": "17:00",
+      "endtime": "20:30",
+      "helpers": [
+        "Jens"
       ]
     }
   ]
