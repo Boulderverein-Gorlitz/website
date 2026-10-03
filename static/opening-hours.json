@@ -1,15 +1,5 @@
 {
   "closingDays": [
-    {
-      "comment": "Überland",
-      "from": "2026-09-04",
-      "to": "2026-09-06"
-    },
-    {
-      "comment": "Private Feier von Jens",
-      "from": "2026-09-19",
-      "to": "2026-09-19"
-    }
   ],
   "openingHours": [
     {
@@ -128,6 +118,39 @@
       "endTime": "20:30",
       "helpers": [
         "Jens"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "startTime": "17:30",
+      "endTime": "20:30",
+      "helpers": [
+        "Gustav"
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "startTime": "17:00",
+      "endTime": "20:30",
+      "helpers": [
+        "Thomas"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "startTime": "17:30",
+      "endTime": "20:30",
+      "helpers": [
+        "Gustav"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "startTime": "17:00",
+      "endTime": "20:30",
+      "helpers": [
+        "Jens",
+        "Manuel"
       ]
     }
   ]
