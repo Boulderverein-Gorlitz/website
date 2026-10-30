@@ -27,6 +27,7 @@ type OpeningHoursEntry = {
   startTime: string
   endTime: string
   helpers: Array<string>
+  comment?: string
 }
 
 type OpeningHoursEntryWithDateTime = OpeningHoursEntry & {
@@ -35,17 +36,17 @@ type OpeningHoursEntryWithDateTime = OpeningHoursEntry & {
   endTimeDT: DateTime
 }
 
-// only those info we need for displaying (e.g. no helpers required for this)
+// only the info we need for displaying (e.g. no helpers required for this)
 type OpeningHoursDisplayEntry = {
   dateDT: DateTime
   startTimeDT: DateTime
   endTimeDT: DateTime
   helpers: Array<string>
+  comment?: string
 }
 
 function transformOpeningHoursEntries(
   entries: Array<OpeningHoursEntry>,
-  referenceTime: DateTime,
 ): Array<OpeningHoursDisplayEntry> {
   return entries
     .map((entry) => {
@@ -79,6 +80,7 @@ function transformOpeningHoursEntries(
             startTimeDT: curr.startTimeDT,
             endTimeDT: curr.endTimeDT,
             helpers: curr.helpers,
+            comment: curr.comment
           },
         ]
       }
@@ -107,7 +109,7 @@ function OpeningHoursPage() {
       })
       .then((result) => {
         if (isOpeningHoursJson(result)) {
-          setOpeningHours(transformOpeningHoursEntries(result.openingHours, minimumDateToShow))
+          setOpeningHours(transformOpeningHoursEntries(result.openingHours))
           setClosingDays(result.closingDays)
           setError(undefined)
         } else {
@@ -170,6 +172,7 @@ function OpeningHoursPage() {
                   <th>Datum</th>
                   <th>Zeit</th>
                   <th>Betreuer</th>
+                  <th>Hinweise</th>
                 </tr>
               </thead>
               <tbody>
@@ -182,6 +185,7 @@ function OpeningHoursPage() {
                       Uhr
                     </td>
                     <td>{entry.helpers.join(", ")}</td>
+                    <td><strong>{entry.comment}</strong></td>
                   </tr>
                 ))}
               </tbody>
