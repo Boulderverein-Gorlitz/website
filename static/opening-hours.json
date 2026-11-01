@@ -170,6 +170,15 @@
         "Gustav"
       ],
       "comment": "Scooter Only"
+    },
+    {
+      "date": "2026-11-13",
+      "startTime": "17:30",
+      "endTime": "20:30",
+      "helpers": [
+        "Justin", "Dennis"
+      ],
+      "comment": "Bike Only"
     }
   ]
 }
