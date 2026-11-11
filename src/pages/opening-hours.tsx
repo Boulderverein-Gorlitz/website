@@ -146,7 +146,7 @@ function OpeningHoursPage() {
         <>
           {closingDays.length > 0 && (
             <>
-              <p>In folgenden Zeiträumen haben wir generell geschlossen:</p>
+              <p>In folgenden Zeiträumen haben wir generell <strong>geschlossen</strong>:</p>
               <ul>
                 {closingDays.map((closingDayEntry) => {
                   if (closingDayEntry.to) {
@@ -163,7 +163,7 @@ function OpeningHoursPage() {
             </>
           )}
           <br />
-          <p>Öffnungszeiten:</p>
+          <h3>Öffnungszeiten:</h3>
           {openingHours.length === 0 && <p>Aktuell keine Öffnungszeiten :-(</p>}
           {openingHours.length > 0 && (
             <table>

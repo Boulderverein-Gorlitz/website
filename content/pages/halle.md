@@ -14,8 +14,6 @@ Am Bahnhof Weinhübel 2
 
 ## Eintrittspreise
 
-Um die Skate- und Boulderhalle zu nutzen, ist eine Vereinsmitgliedschaft nicht zwingend notwendig, jedoch haben
-Vereinsmitglieder die Möglichkeit, besondere Vergünstigungen zu nutzen.
 
 Die regulären Eintrittspreise sind:
 
@@ -24,6 +22,8 @@ Die regulären Eintrittspreise sind:
 
 Die Nutzung ist auf die regulären [Öffnungszeiten](/opening-hours) der Halle beschränkt.
 
+Die Nutzung der Halle ist auch ohne Vereinsmitgliedschaft möglich, jedoch haben
+Vereinsmitglieder die Möglichkeit, besondere Vergünstigungen zu nutzen:
 Vereinsmitglieder haben die Möglichkeit, für 60 € (Kinder unter 14 Jahren) bzw. 100 € (ab 14 Jahre) eine Jahreskarte zu
 kaufen. Wie du Vereinsmitglied werden kannst, erfährst du unter [Mitmachen -> Werde Mitglied](/mitmachen)
 
