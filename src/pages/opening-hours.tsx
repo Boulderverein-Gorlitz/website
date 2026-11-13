@@ -20,6 +20,14 @@ type ClosingDaysEntry = {
   comment?: string
   from: string
   to?: string
+  startTime?: string
+  endTime?: string
+  link?: string
+}
+
+type ClosingDaysEntryWithDateTime = ClosingDaysEntry & {
+  startTimeDT?: DateTime
+  endTimeDT?: DateTime
 }
 
 type OpeningHoursEntry = {
@@ -45,9 +53,19 @@ type OpeningHoursDisplayEntry = {
   comment?: string
 }
 
-function transformOpeningHoursEntries(
-  entries: Array<OpeningHoursEntry>,
-): Array<OpeningHoursDisplayEntry> {
+function transformClosingDaysEntries(entries: Array<ClosingDaysEntry>): Array<ClosingDaysEntryWithDateTime> {
+  return entries.map((entry) => {
+    const startTimeDT = entry.startTime ? DateTime.fromISO(entry.startTime) : undefined
+    const endTimeDT = entry.endTime ? DateTime.fromISO(entry.endTime) : undefined
+    return {
+      ...entry,
+      startTimeDT,
+      endTimeDT,
+    }
+  })
+}
+
+function transformOpeningHoursEntries(entries: Array<OpeningHoursEntry>): Array<OpeningHoursDisplayEntry> {
   return entries
     .map((entry) => {
       const dateDT = DateTime.fromISO(entry.date)
@@ -80,11 +98,34 @@ function transformOpeningHoursEntries(
             startTimeDT: curr.startTimeDT,
             endTimeDT: curr.endTimeDT,
             helpers: curr.helpers,
-            comment: curr.comment
+            comment: curr.comment,
           },
         ]
       }
     }, [])
+}
+
+function ClosingDayItem({ entry }: { entry: ClosingDaysEntryWithDateTime }) {
+  const timeContent = entry.to
+    ? `${DateTime.fromISO(entry.from).toLocaleString(DateTime.DATE_FULL)} - ${DateTime.fromISO(entry.to).toLocaleString(DateTime.DATE_FULL)}`
+    : DateTime.fromISO(entry.from).toLocaleString(DateTime.DATE_FULL)
+
+  const content = (
+    <span>
+      {timeContent}
+      {entry.comment ? ` - ${entry.comment}` : ""}
+    </span>
+  )
+
+  if (entry.link) {
+    return (
+      <a href={entry.link} target="_blank">
+        {content}
+      </a>
+    )
+  } else {
+    return content
+  }
 }
 
 // We want to show all future opening hours and those of today and yesterday
@@ -94,7 +135,7 @@ const FETCH_URL = "/opening-hours.json"
 
 function OpeningHoursPage() {
   const [openingHours, setOpeningHours] = useState<Array<OpeningHoursDisplayEntry>>([])
-  const [closingDays, setClosingDays] = useState<Array<ClosingDaysEntry>>([])
+  const [closingDays, setClosingDays] = useState<Array<ClosingDaysEntryWithDateTime>>([])
 
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<any>(undefined)
@@ -110,7 +151,7 @@ function OpeningHoursPage() {
       .then((result) => {
         if (isOpeningHoursJson(result)) {
           setOpeningHours(transformOpeningHoursEntries(result.openingHours))
-          setClosingDays(result.closingDays)
+          setClosingDays(transformClosingDaysEntries(result.closingDays))
           setError(undefined)
         } else {
           setError("Load successful but data is not correct. Got:" + JSON.stringify(result))
@@ -136,7 +177,9 @@ function OpeningHoursPage() {
         kurzfristig ändern.
       </p>
       <p>Schau regelmäßig nach, ob es Änderungen gibt.</p>
-      <p>Es gelten die Nutzungsbedingungen und Eintrittspreis, siehe <a href="/halle">Halle</a>.</p>
+      <p>
+        Es gelten die Nutzungsbedingungen und Eintrittspreis, siehe <a href="/halle">Halle</a>.
+      </p>
 
       {loading ? (
         <>
@@ -146,19 +189,15 @@ function OpeningHoursPage() {
         <>
           {closingDays.length > 0 && (
             <>
-              <p>In folgenden Zeiträumen haben wir generell <strong>geschlossen</strong>:</p>
+              <p>
+                In folgenden Zeiträumen haben wir generell <strong>geschlossen</strong>:
+              </p>
               <ul>
-                {closingDays.map((closingDayEntry) => {
-                  if (closingDayEntry.to) {
-                    return (
-                      <li>
-                        {DateTime.fromISO(closingDayEntry.from).toLocaleString(DateTime.DATE_FULL)} - {DateTime.fromISO(closingDayEntry.to).toLocaleString(DateTime.DATE_FULL)}
-                      </li>
-                    )
-                  } else {
-                    return <li>{DateTime.fromISO(closingDayEntry.from).toLocaleString(DateTime.DATE_FULL)}</li>
-                  }
-                })}
+                {closingDays.map((closingDayEntry) => (
+                  <li>
+                    <ClosingDayItem key={closingDayEntry.from} entry={closingDayEntry} />
+                  </li>
+                ))}
               </ul>
             </>
           )}
@@ -185,7 +224,9 @@ function OpeningHoursPage() {
                       Uhr
                     </td>
                     <td>{entry.helpers.join(", ")}</td>
-                    <td><strong>{entry.comment}</strong></td>
+                    <td>
+                      <strong>{entry.comment}</strong>
+                    </td>
                   </tr>
                 ))}
               </tbody>

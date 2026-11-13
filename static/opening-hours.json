@@ -2,6 +2,11 @@
   "closingDays": [
     {
       "from": "2026-11-22"
+    },
+    {
+      "from": "2026-11-26",
+      "comment": "Rabryka Workshop",
+      "link": "https://www.rabryka.eu/de/Kalender.html#14233"
     }
   ],
   "openingHours": [
