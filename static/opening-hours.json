@@ -210,7 +210,7 @@
       "comment": "Bike Only"
     },
     {
-      "date": "2026-11-21",
+      "date": "2026-11-27",
       "startTime": "17:30",
       "endTime": "20:30",
       "helpers": [
@@ -218,6 +218,24 @@
         "Justin"
       ],
       "comment": "Bike Only"
+    },
+    {
+      "date": "2026-12-03",
+      "startTime": "16:00",
+      "endTime": "190",
+      "helpers": [
+        "Johannes"
+      ],
+      "comment": "Scooter Only"
+    },
+    {
+      "date": "2026-12-17",
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "helpers": [
+        "Johannes"
+      ],
+      "comment": "Scooter Only"
     }
   ]
 }
