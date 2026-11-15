@@ -46,6 +46,7 @@ type OpeningHoursEntryWithDateTime = OpeningHoursEntry & {
 
 // only the info we need for displaying (e.g. no helpers required for this)
 type OpeningHoursDisplayEntry = {
+  key: string
   dateDT: DateTime
   startTimeDT: DateTime
   endTimeDT: DateTime
@@ -75,34 +76,13 @@ function transformOpeningHoursEntries(entries: Array<OpeningHoursEntry>): Array<
 
       return {
         ...entry,
+        key: `${entry.date}-${entry.startTime}-${entry.endTime}`,
         dateDT,
         startTimeDT: dateDT.set({ hour: start.hour, minute: start.minute }),
         endTimeDT: dateDT.set({ hour: end.hour, minute: end.minute }),
-      } satisfies OpeningHoursEntryWithDateTime
+      } satisfies OpeningHoursDisplayEntry
     })
     .filter((entry) => entry.dateDT > minimumDateToShow)
-    .reduce<Array<OpeningHoursDisplayEntry>>((prev, curr) => {
-      const existingEntry = prev.find((entry) => entry.dateDT.toISODate() === curr.dateDT.toISODate())
-
-      if (existingEntry) {
-        // expand the start/end time when there are overlapping times.
-        existingEntry.startTimeDT = DateTime.min(existingEntry.startTimeDT, curr.startTimeDT)
-        existingEntry.endTimeDT = DateTime.max(existingEntry.endTimeDT, curr.endTimeDT)
-        existingEntry.helpers = [...new Set([...existingEntry.helpers, ...curr.helpers])]
-        return prev
-      } else {
-        return [
-          ...prev,
-          {
-            dateDT: curr.dateDT,
-            startTimeDT: curr.startTimeDT,
-            endTimeDT: curr.endTimeDT,
-            helpers: curr.helpers,
-            comment: curr.comment,
-          },
-        ]
-      }
-    }, [])
 }
 
 function ClosingDayItem({ entry }: { entry: ClosingDaysEntryWithDateTime }) {
@@ -194,7 +174,7 @@ function OpeningHoursPage() {
               </p>
               <ul>
                 {closingDays.map((closingDayEntry) => (
-                  <li>
+                  <li key={`${closingDayEntry.from}`}>
                     <ClosingDayItem key={closingDayEntry.from} entry={closingDayEntry} />
                   </li>
                 ))}
@@ -216,7 +196,7 @@ function OpeningHoursPage() {
               </thead>
               <tbody>
                 {openingHours.map((entry) => (
-                  <tr key={`entry_${entry.dateDT.toISODate()}`}>
+                  <tr key={entry.key}>
                     <td>{entry.dateDT.toLocaleString(DateTime.DATE_FULL)}</td>
                     <td>
                       <time>{entry.startTimeDT.toLocaleString(DateTime.TIME_24_SIMPLE)}</time>-

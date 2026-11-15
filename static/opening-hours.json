@@ -201,8 +201,18 @@
     },
     {
       "date": "2026-11-20",
-      "startTime": "17:30",
-      "endTime": "20:30",
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "helpers": [
+        "Konstanze",
+        "Johannes"
+      ],
+      "comment": "Scooter Only"
+    },
+    {
+      "date": "2026-11-20",
+      "startTime": "18:00",
+      "endTime": "21:00",
       "helpers": [
         "Justin",
         "Dennis"
